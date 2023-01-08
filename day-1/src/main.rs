@@ -2,7 +2,7 @@ use std::error::Error;
 
 fn main() -> Result<(), Box<dyn Error>>{
     // part 1
-    let input = include_str!("../input.test");
+    let input = include_str!("../input.txt");
 
     let max: String = input.split("\n\n")
         .map(|group| {
