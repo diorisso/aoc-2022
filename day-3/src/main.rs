@@ -14,8 +14,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     let part1_result: usize = INPUT.lines()
         .map(|rucksack| {
-            let compartment_a = &rucksack[0..(rucksack.len()/2)];
-            let compartment_b = &rucksack[(rucksack.len()/2)..rucksack.len()];
+            let (compartment_a, compartment_b) = rucksack.split_at(rucksack.len() / 2);
 
             let index = compartment_a
                 .find(|char| compartment_b.contains(char))
